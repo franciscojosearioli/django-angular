@@ -1,0 +1,7 @@
+<!-- document-form.component.html -->
+<form (ngSubmit)="onSubmit()" #documentForm="ngForm" enctype="multipart/form-data">
+    <input type="text" name="title" [(ngModel)]="document.title" required>
+    <textarea name="description" [(ngModel)]="document.description" required></textarea>
+    <input type="file" name="pdf" (change)="onFileSelected($event)" required>
+    <button type="submit">Submit</button>
+  </form>
